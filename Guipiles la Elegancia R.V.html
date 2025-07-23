@@ -1,0 +1,199 @@
+<!DOCTYPE html>  
+<html lang="es"> 
+<head
+    <meta charset="UTF-8"> 
+    <title> Guipiles la Elegancia R.V  </title>  
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        header {
+            background-image: url('https://scontent.fgua1-2.fna.fbcdn.net/v/t39.30808-6/485696346_677933791569610_7435766207923587985_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vmp_a5Tlka0Q7kNvwHYyzof&_nc_oc=AdlTl4XkPiEb65cdfmDL4tekuN-fAYIeQf8OKZOF-K0GRcvd_rxuQlSLHZBOXl6GgCc&_nc_zt=23&_nc_ht=scontent.fgua1-2.fna&_nc_gid=5gwE2yCfX1GLGzor1wIDPA&oh=00_AfRSXjipRjqxnlpECirb5g-dzEmd9Qb1E-M_ja7o9LCCtQ&oe=68862238');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .boton-compra {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #219150;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body><header>
+    <h1>Guipiles la Elegancia R.V</h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="https://scontent.fgua1-3.fna.fbcdn.net/v/t39.30808-6/491405459_695509729812016_4124987924354755889_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=HeQSQqRgwnkQ7kNvwERn8S4&_nc_oc=AdlFTtkWdunFdMliTzoTDj90hFIpGkIkRH26J8V13j9f0FxiX18hWaWOZ87i_XnStb0&_nc_zt=23&_nc_ht=scontent.fgua1-3.fna&_nc_gid=FiCVUmBnyYWEvhENbLQHlA&oh=00_AfSbpnZmL2HvK3pmr3n5dQftf7LaO9GmeQorqOrPqogt6A&oe=68863351" alt="Guipil Dos lienzos">
+        <h2>Tipo: Dos Lienzos</h2>
+        <p><strong>Q8,000</strong></p>
+        <p>Marca: C.R </p>
+        <button class="boton-compra" onclick="mostrarPopup('Guipil Dos lienzos')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://scontent.fgua1-2.fna.fbcdn.net/v/t39.30808-6/490906674_695509789812010_1595624761277030116_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=qi3g9QiCXHIQ7kNvwFjKI7-&_nc_oc=AdkmsAt44o3bwwtc9AnqAD_x2Xbot0Ou9L0mWQ0S_Vj_9aYSC5uBWrXgOjIksEosFY0&_nc_zt=23&_nc_ht=scontent.fgua1-2.fna&_nc_gid=Kx1k7YE-W0xqUl-kQESTOA&oh=00_AfQuAbAFjWba3tFnnZuhXDObTgl5Jj_kvYkzQn_tfm3dZw&oe=68863574" alt="Guipil Dos lienzos">
+        <h2>Tipo: Dos Lienzos</h2>
+        <p><strong>Q8,000</strong></p>
+        <p>Marca: C.R </p>
+        <button class="boton-compra" onclick="mostrarPopup('Guipil Dos lienzos')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://scontent.fgua1-3.fna.fbcdn.net/v/t39.30808-6/490901206_695509703145352_1258397403270266012_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0VR7n4cson4Q7kNvwHB1-U7&_nc_oc=Adl4lQnOz5CGDs0xITS4tPGpkKqEaSDZQ4QmoPBEW7yC_e9d1kHSNfmkJsdaLemLk7c&_nc_zt=23&_nc_ht=scontent.fgua1-3.fna&_nc_gid=nTZo3REgQABl81g6QKMS2Q&oh=00_AfSwOqvxv1QunV75mq-JScKjSOmNWPYkd5fm4Wr1sXCtqQ&oe=6886190B" alt="Guipil Dos lienzos">
+		<h2>Tipo: Dos Lienzos</h2>
+        <p><strong>Q8,000</strong></p>
+        <p>Marca: C.R </p>
+        <button class="boton-compra" onclick="mostrarPopup('Guipil Dos lienzos')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://scontent.fgua1-2.fna.fbcdn.net/v/t39.30808-6/496812197_719059967456992_2567859683914843621_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=RJpn0Btjn5cQ7kNvwEBwWCJ&_nc_oc=AdmuLvMLJr6I7cQcYKARZX9YUu4aKEWPBn6QqGOOP01psvBXh8hWbMWPouk7UmM1Vn8&_nc_zt=23&_nc_ht=scontent.fgua1-2.fna&_nc_gid=3Zs_A9mwVAl_qxGxK2KxHA&oh=00_AfSTACfqfonQQc4lqO-NY0HoKoTu2JfwPDWYj7ynjfLC4A&oe=688632DA" alt="Guipil Dos lienzos">
+		<h2>Tipo: Dos Lienzos</h2>
+        <p><strong>Q8,000</strong></p>
+        <p>Marca: C.R </p>
+        <button class="boton-compra" onclick="mostrarPopup('Guipil Dos lienzos')">Comprar</button>
+    </div>
+	
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href="https://wa.me/50251928361" target="_blank">📱 WhatsApp</a>
+    <a href="mailto:ventas@guipileslaelegancia.com">📧 Correo</a>
+    <a href="tel:+50251928361">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+	<img src="https://th.bing.com/th/id/R.7672cd8cd0df7e42acb7369fd2714790?rik=rCojYsJJhHR78A&riu=http%3a%2f%2fambiental-atmosfer.mx%2fwp-content%2fuploads%2f2024%2f03%2f245_8_11zon.png&ehk=KZ4KXrUdC4PUIiUGYJlZHefn0ih6J46bZc6SFjCaXRc%3d&risl=&pid=ImgRaw&r" alt="Éxito">
+        <h2>¡Compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". Te contactaremos pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
